@@ -1,0 +1,186 @@
+/* Apply background image to the entire page */
+.page-background {
+  background: url('https://images.coolwallpapers.me/picsup/5694895-restaurant-wallpapers.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: #fff; /* Ensures readability of text */
+  padding: 0;
+  margin: 0;
+}
+
+/* Hero section styling */
+.hero-section {
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  padding: 80px 20px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Hero content */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: slideInLeft 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Advanced styling for the "Explore Now" button */
+.hero-btn {
+  font-size: 1.3rem;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #ff8c00, #ff5722); /* Gradient color */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #ff5722, #ff8c00); /* Inverted gradient on hover */
+  transform: translateY(-6px) scale(1.07);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 140, 0, 0.4); /* Focus effect */
+}
+
+/* Keyframe animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Advanced styling for the explore-activity section */
+.explore-activity {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 40px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.explore-activity h2 {
+  font-size: 2.5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.explore-activity p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.explore-activity h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff8c00;
+  margin-bottom: 15px;
+}
+
+.explore-activity ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.explore-activity ul li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+}
+
+.explore-activity ul li:before {
+  content: '✔';
+  color: #ff8c00;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.explore-activity .hero-btn {
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-activity .hero-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for Chatbot Image */
+.chatbot-image {
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}

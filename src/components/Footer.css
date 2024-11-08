@@ -1,0 +1,118 @@
+/* Footer container */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer section */
+  .footer-section h5 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .footer-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #007bff;
+  }
+  
+  /* Social Icons Styling */
+  .social-icons {
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    border-radius: 50%;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  /* Social Media Icons colors */
+  .facebook-icon {
+    background-color: #3b5998;
+  }
+  
+  .instagram-icon {
+    background-color: #e4405f;
+  }
+  
+  .twitter-icon {
+    background-color: #1da1f2;
+  }
+  
+  /* Footer bottom */
+  .footer-bottom {
+    margin-top: 40px;
+    font-size: 1rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Animation for footer text */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 767px) {
+    .footer-section {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .social-icons {
+      text-align: center;
+    }
+  
+    .footer-bottom {
+      font-size: 0.9rem;
+    }
+  }
+  

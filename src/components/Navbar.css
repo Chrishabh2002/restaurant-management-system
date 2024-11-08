@@ -1,0 +1,72 @@
+/* Basic Navbar Styling */
+.navbar {
+    background-color: #343a40 !important;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  /* Logo Styling with Animation */
+  .brand-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .brand-logo:hover {
+    transform: scale(1.1);
+    color: #f8f9fa;
+  }
+  
+  /* Navbar Links */
+  .nav-link {
+    color: #dcdcdc;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Hover Effects */
+  .nav-link:hover {
+    color: #f8f9fa;
+    text-decoration: none;
+    background-color: #396798;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Underline Animation */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f8f9fa;
+    left: 50%;
+    bottom: 0;
+    transition: width 0.3s, left 0.3s;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+  
+  /* Navbar Toggle for Mobile */
+  .navbar-toggler {
+    border-color: #007bff;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #007bff;
+  }
+  
+  /* Smooth background change on scroll */
+  .navbar.scrolled {
+    background-color: #0056b3 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,201 @@
+/* Chatbot container */
+.chatbot-container {
+  width: 400px;
+  height: 600px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: slideInUp 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #FFB600; /* Light golden border matching button color */
+  z-index: 999;
+}
+
+/* Chatbot header styling */
+.chatbot-header {
+  background-color: #FFB600; /* Light golden color matching button color */
+  color: white;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Adding an image or icon to the header */
+.chatbot-header img {
+  width: 35px;
+  height: auto;
+  margin-left: 10px;
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+/* Chatbot face emoji hover effect */
+.chatbot-face {
+  font-size: 30px;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.chatbot-face:hover {
+  transform: scale(1.2); /* Hover effect */
+}
+
+/* Chatbot messages section */
+.chatbot-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  animation: fadeInMessages 1s ease-in-out;
+}
+
+/* Cloud-shaped Message style */
+.message {
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  border-radius: 50px;
+  max-width: 75%;
+  font-size: 16px;
+  position: relative;
+  animation: bounceIn 1s ease-out;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid #FFB600; /* Light golden border */
+}
+
+/* User message cloud shape */
+.user-message {
+  background-color: #FFB600; /* Light golden color matching button color */
+  color: white;
+  margin-left: auto;
+  border-radius: 50px;
+  border: 2px solid #FFB600; /* Matching border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Bot message cloud shape */
+.bot-message {
+  background-color: #e0e0e0;
+  color: #333;
+  margin-right: auto;
+  border-radius: 50px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input area */
+.chatbot-input {
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+
+.chatbot-input input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Send button styling */
+.send-button {
+  background-color: #FFB600; /* Light golden color matching button color */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #cc8e00; /* Darker golden on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframe animations */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInMessages {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Additional hover effect for the message */
+.message:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

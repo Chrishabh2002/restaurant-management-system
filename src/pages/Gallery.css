@@ -1,0 +1,94 @@
+/* Container for the entire page */
+.gallery-page {
+    background: #f4f4f4;
+    padding:  0px;
+    min-height: 100vh;
+  }
+  
+  /* Gallery title */
+  .section-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  /* Gallery items (image containers) */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image inside the gallery item */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Title overlay */
+  .gallery-item .gallery-item-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-item-title {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Animation for gallery page */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive styles for smaller devices */
+  @media (max-width: 767px) {
+    .gallery-item {
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+    
+    .gallery-item .gallery-item-title {
+      font-size: 1rem;
+    }
+  }
+  

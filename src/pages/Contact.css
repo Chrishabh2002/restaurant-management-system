@@ -1,0 +1,78 @@
+.contact-page {
+    background-image: url('https://wallpapers.com/images/hd/glowing-contact-us-logo-qx58564q7a51etk6.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 0px;
+    color: white;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .contact-info h4, .contact-form h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .contact-form input:focus, .contact-form textarea:focus {
+    background-color: #f8f9fa;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  

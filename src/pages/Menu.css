@@ -1,0 +1,119 @@
+/* Menu.css */
+
+/* Base styles for the menu page */
+.menu-page {
+  background-color: #f8f8f8;
+  padding: 0px;
+}
+
+/* Title styling */
+.menu-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation: slideInBlurredTop 1.2s ease-in-out;
+}
+
+/* Menu item column styling */
+.menu-item-col {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* MenuItem component container styling */
+.menu-item {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, rotate 0.3s ease;
+  overflow: hidden;
+  animation: zoomIn 1s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateY(-10px) scale(1.03) rotate(1deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: pulse 0.5s infinite alternate;
+}
+
+/* Image styling */
+.menu-item img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Item details */
+.menu-item-details {
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-item-details h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover .menu-item-details h4 {
+  color: #e67e22;
+}
+
+.menu-item-details p {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.menu-item-details .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #e67e22;
+}
+
+/* Advanced animations */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInBlurredTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scaleY(2.5) scaleX(0.2);
+    transform-origin: top center;
+    filter: blur(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1) scaleX(1);
+    transform-origin: top center;
+    filter: blur(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.03) rotate(1deg);
+  }
+  100% {
+    transform: scale(1.05) rotate(0);
+  }
+}
