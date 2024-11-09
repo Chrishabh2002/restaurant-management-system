@@ -1,0 +1,83 @@
+/* General Styling */
+.about-us-page {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding-top: 100px 0;
+    padding-bottom: 60 0px;
+  }
+  
+  .about-us-content {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+  
+  .about-us-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff5722;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  .about-us-description {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.7;
+    animation: fadeInUp 1.2s ease-out;
+  }
+  
+  .about-us-images {
+    margin-top: 40px;
+  }
+  
+  .animated-image {
+    position: relative;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .animated-image:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .image-caption {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ff5722;
+    margin-top: 10px;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

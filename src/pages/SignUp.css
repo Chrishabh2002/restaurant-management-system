@@ -1,0 +1,199 @@
+/* General Styling */
+.signup-container {
+  background: linear-gradient(135deg, #6ec1e4, #4a89f0, #3c77f5, #5b7cfa); /* Multi-color gradient */
+  background-image: url('https://www.alll.com/wp-content/uploads/2019/01/signup-background2-768x432.jpg'); /* Background Image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-out;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Apply a subtle animation on the background to give it movement */
+@keyframes backgroundAnimation {
+  0% { background-position: left; }
+  100% { background-position: right; }
+}
+.signup-container {
+  animation: backgroundAnimation 20s ease infinite;
+}
+
+/* Sign-Up Form */
+.signup-form {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 0 15px 40px rgba(0, 0, 0, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: formSlideIn 1s ease-out;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Form Slide-In Animation */
+@keyframes formSlideIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Hover effect to add 3D transformation */
+.signup-form:hover {
+  transform: rotateY(10deg) rotateX(10deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: bounceIn 1s ease-out;
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Input Fields */
+.signup-form .form-group input {
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form .form-group input:focus {
+  border-color: #4a89f0;
+  box-shadow: 0 0 15px rgba(74, 137, 240, 0.8);
+  transform: translateY(-5px);
+  background-color: #ffffff;
+  animation: inputFocus 0.3s ease-in-out;
+}
+
+/* Input Focus Animation */
+@keyframes inputFocus {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-5px); }
+}
+
+/* Button */
+.signup-form .btn {
+  background-color: #4a89f0;
+  color: white;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form .btn:hover {
+  background-color: #6ec1e4;
+  transform: translateY(-7px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Active State */
+.signup-form .btn:active {
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+/* Greeting Section */
+.signup-greeting {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 3rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform-style: preserve-3d;
+  animation: fadeInUp 1s ease-out;
+  transition: transform 0.3s ease-in-out;
+  max-width: 500px;
+  width: 100%;
+}
+
+.signup-greeting:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signup-greeting h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #ff5e62; /* Gradient color for heading */
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.signup-greeting p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Animation for Background Fade-In */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Bounce Effect for Form Title */
+@keyframes bounceIn {
+  0% { transform: translateY(-100%); }
+  60% { transform: translateY(30px); }
+  80% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Animation for Greeting Fade-Up */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .signup-form {
+    margin-bottom: 2rem;
+  }
+
+  .signup-form .form-group input {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .signup-form .btn {
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  .signup-greeting h2 {
+    font-size: 2rem;
+  }
+
+  .signup-greeting p {
+    font-size: 1rem;
+  }
+}

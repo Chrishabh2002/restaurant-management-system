@@ -1,0 +1,119 @@
+/* Main Page Styling */
+.reservation-page {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Background gradient */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .reservation-content {
+    padding-top: 80px; /* Adjust for fixed navbar */
+    padding-bottom: 4rem; /* Add space for footer */
+    flex-grow: 1;
+    color: #fff;
+  }
+  
+  /* Reservation Card */
+  .reservation-card {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .reservation-card h2 {
+    color: #e67e22;
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .card-body input,
+  .card-body select,
+  .card-body textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .card-body button {
+    background-color: #e67e22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-body button:hover {
+    background-color: #d35400;
+  }
+  
+  /* Hover effect on form elements */
+  .card-body input:hover,
+  .card-body select:hover,
+  .card-body textarea:hover {
+    border-color: #e67e22;
+  }
+  
+  /* Footer Styling */
+  footer {
+    position: relative;
+    bottom: 0;
+    background-color: #34495e;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  footer a {
+    color: #e67e22;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #d35400;
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .reservation-card {
+      padding: 1.5rem;
+    }
+  
+    .reservation-card h2 {
+      font-size: 2rem;
+    }
+  
+    .card-body button {
+      font-size: 1rem;
+    }
+  }
+  

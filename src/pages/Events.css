@@ -1,0 +1,70 @@
+/* General Styling */
+.events-page {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .events-content {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+  }
+  
+  .events-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff5722;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-out;
+  }
+  
+  /* Event Card Styling */
+  .event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .event-description {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .event-date {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #888;
+    font-weight: 600;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

@@ -1,0 +1,180 @@
+/* General Form Styling */
+.reservation-form {
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease-out, formSlideIn 0.8s ease-out;
+    position: relative;
+    perspective: 1000px; /* Add perspective for 3D effects */
+  }
+  
+  /* Form Title */
+  .form-title {
+    text-align: center;
+    color: #e67e22;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    animation: fadeInTitle 0.8s ease-in-out;
+  }
+  
+  /* Image Background */
+  .reservation-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://i.pinimg.com/originals/e2/ee/85/e2ee85c1fcd2ee988fa2622df0a03f30.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .reservation-form:hover::before {
+    opacity: 0.3; /* Increase opacity when hovered */
+  }
+  
+  /* Input and Select Styling */
+  .form-input {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    transform: translateZ(0); /* Ensures smoother 3D effect */
+  }
+  
+  /* Input Focus and Validation */
+  .form-input:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 5px rgba(230, 126, 34, 0.8);
+    animation: bounceIn 0.5s ease-out;
+    background-color: #fff8e1;
+    transform: scale(1.05) translateZ(0); /* Add 3D scale effect */
+  }
+  
+  /* Hover Effects */
+  .form-input:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    animation: pulseButton 1.5s infinite;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submit-button:hover {
+    background-color: #d35400;
+    transform: scale(1.05) translateY(-2px); /* 3D hover effect */
+  }
+  
+  .submit-button:focus {
+    background-color: #d35400;
+    box-shadow: 0 0 10px rgba(211, 84, 0, 0.8);
+    transform: translateY(-4px);
+  }
+  
+  /* Media Queries for Responsive Design */
+  @media (max-width: 768px) {
+    .reservation-form {
+      padding: 2rem;
+    }
+  
+    .form-title {
+      font-size: 2rem;
+    }
+  
+    .submit-button {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Animations */
+  
+  /* Fade In Effect */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Form Slide In */
+  @keyframes formSlideIn {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Title Fade-In */
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Input Bounce Effect on Focus */
+  @keyframes bounceIn {
+    0% {
+      transform: scale(1);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    70% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Button Pulse Effect */
+  @keyframes pulseButton {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

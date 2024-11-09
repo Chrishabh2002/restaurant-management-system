@@ -1,0 +1,176 @@
+/* Loyalty Rewards Page */
+.loyalty-rewards-page {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px 0;
+    padding-bottom: 60px 0;
+  }
+  
+  /* Content section */
+  .loyalty-rewards-content {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #1a242f;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .loyalty-rewards-content h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #e67e22;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .loyalty-rewards-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ecf0f1;
+    margin-bottom: 2rem;
+  }
+  
+  /* Section for Reward Info */
+  .reward-info {
+    margin-bottom: 2rem;
+  }
+  
+  .reward-info h3 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+  }
+  
+  .reward-info p {
+    font-size: 1rem;
+    color: #ecf0f1;
+  }
+  
+  /* Section for Points Tracker */
+  .points-tracker {
+    margin-bottom: 2rem;
+  }
+  
+  .points-tracker h3 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+  }
+  
+  .points-display {
+    font-size: 2rem;
+    color: #ecf0f1;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .earn-points-btn {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .earn-points-btn:hover {
+    background-color: #d35400;
+  }
+  
+  /* Rewards Redemption Information */
+  .redeem-info {
+    margin-bottom: 2rem;
+  }
+  
+  .redeem-info h3 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+  }
+  
+  .redeem-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .redeem-info li {
+    font-size: 1.1rem;
+    color: #ecf0f1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .redeem-info strong {
+    color: #e67e22;
+  }
+  
+  /* Call to Action Section */
+  .cta {
+    margin-top: 2rem;
+  }
+  
+  .cta h3 {
+    font-size: 1.8rem;
+    color: #e67e22;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-btn {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #d35400;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .loyalty-rewards-content {
+      padding: 1.5rem;
+    }
+  
+    .loyalty-rewards-content h2 {
+      font-size: 2rem;
+    }
+  
+    .loyalty-rewards-content p {
+      font-size: 1rem;
+    }
+  
+    .points-display {
+      font-size: 1.5rem;
+    }
+  
+    .cta-btn {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
+  

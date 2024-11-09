@@ -1,0 +1,76 @@
+/* Basic page styling */
+.order-online {
+    padding: 50px 0;
+  }
+  
+  .order-online .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .menu-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    border: none;
+  }
+  
+  .menu-item:hover {
+    transform: rotateY(10deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-content {
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+  }
+  
+  .card-img {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item:hover .card-img {
+    transform: scale(1.05);
+  }
+  
+  .card-body {
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .card-body h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-body .add-to-cart {
+    background-color: #ff7f50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card-body .add-to-cart:hover {
+    background-color: #ff5722;
+  }
+  
+  @media (max-width: 767px) {
+    .order-online .section-title {
+      font-size: 2rem;
+    }
+  
+    .menu-item {
+      margin-bottom: 20px;
+    }
+  }
+  
