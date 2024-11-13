@@ -1,18 +1,41 @@
-import React, { useState } from 'react';
-import { Form, Button, Container } from 'react-bootstrap';
-import NavBar from '../components/Navbar';
-import Footer from '../components/Footer';
-import './Login.css'; // Importing the new styles
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import { Form, Button, Container } from "react-bootstrap";
+import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "./Login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+  const [userType, setUserType] = useState("Normal");
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Logged in:', { email, password, rememberMe });
+
+    // Basic validation
+    if (!email || !password) {
+      alert("Please enter both email and password.");
+      return;
+    }
+
+    if (userType === "Admin") {
+      // Check admin credentials
+      if (email === "admin@example.com" && password === "admin123") {
+        localStorage.setItem("isAdminAuthenticated", "true");
+        alert("Admin logged in successfully");
+        navigate("/admin"); // Redirect to Admin Dashboard
+      } else {
+        alert("Invalid admin credentials");
+      }
+    } else {
+      // Handle normal user login
+      console.log("Logged in as normal user:", { email, password, rememberMe });
+      localStorage.setItem("isNormalUserAuthenticated", "true");
+      navigate("/."); // Redirect to Normal User Dashboard
+    }
   };
 
   return (
@@ -30,8 +53,10 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="form-control"
+                required
               />
             </Form.Group>
+
             <Form.Group controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
               <Form.Control
@@ -40,8 +65,22 @@ const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="form-control"
+                required
               />
             </Form.Group>
+
+            <Form.Group controlId="formBasicUserType">
+              <Form.Label>Select Login Type</Form.Label>
+              <Form.Control
+                as="select"
+                value={userType}
+                onChange={(e) => setUserType(e.target.value)}
+              >
+                <option value="Normal">Normal User</option>
+                <option value="Admin">Admin</option>
+              </Form.Control>
+            </Form.Group>
+
             <Form.Group controlId="formBasicCheckbox">
               <Form.Check
                 type="checkbox"
@@ -50,6 +89,7 @@ const Login = () => {
                 onChange={(e) => setRememberMe(e.target.checked)}
               />
             </Form.Group>
+
             <Button variant="primary" type="submit" className="login-btn">
               Login
             </Button>

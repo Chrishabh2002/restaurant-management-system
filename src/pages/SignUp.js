@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import "./SignUp.css"; // For custom styling
-import Navbar from "../components/Navbar";  // Corrected the file name
-import Footer from "../components/Footer";  // Import Footer component
+import { Container, Row, Col } from "react-bootstrap";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom"; // Import useNavigate from react-router-dom
+import "./SignUp.css";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -9,7 +11,10 @@ function Signup() {
     email: "",
     password: "",
     agreeToTerms: false,
+    role: "user",
   });
+
+  const navigate = useNavigate(); // Initialize navigate function
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,18 +26,22 @@ function Signup() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
+    e.preventDefault(); // Prevent the form from refreshing the page
+
+    console.log("Form submitted with data:", formData);
+
+    // Redirect to login page immediately after the form is submitted
+    navigate("/login"); // Redirect to login page
   };
 
   return (
-    <div>
-      <Navbar /> {/* Navbar is imported correctly */}
-      <div className="signup-container">
-        <div className="row">
+    <div className="signup-page">
+      <Navbar />
+      <Container className="signup-content">
+        <Row className="justify-content-center">
           {/* Left Side - Signup Form */}
-          <div className="col-md-6 signup">
-            <h2 className="form-title">Hello, friend!</h2>
+          <Col md={6} className="signup-form">
+            <h2 className="form-title text-center">Hello, friend!</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
@@ -76,6 +85,21 @@ function Signup() {
                 />
               </div>
 
+              <div className="form-group">
+                <label htmlFor="role">Account Type</label>
+                <select
+                  className="form-control"
+                  id="role"
+                  name="role"
+                  value={formData.role}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="user">Normal User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+
               <div className="form-check">
                 <input
                   type="checkbox"
@@ -90,24 +114,25 @@ function Signup() {
                 </label>
               </div>
 
-              <button type="submit" className="btn btn-primary btn-block">
+              <button type="submit" className="btn btn-primary btn-block mt-3">
                 CREATE ACCOUNT
               </button>
             </form>
-          </div>
+          </Col>
 
           {/* Right Side - Greeting Message */}
-          <div className="col-md-6 signup-greeting">
+          <Col md={6} className="signup-greeting text-center">
             <h2>Glad to see You!</h2>
             <p>
-              We're excited to have you join our culinary family! 
-              Sign up today to get exclusive updates, receive special offers, 
-              and be the first to know about our latest menu items and events. Let's make your dining experience unforgettable!
+              We're excited to have you join our culinary family! Sign up today
+              to get exclusive updates, receive special offers, and be the first
+              to know about our latest menu items and events. Let's make your
+              dining experience unforgettable!
             </p>
-          </div>
-        </div>
-      </div>
-      <Footer /> {/* Footer is imported correctly */}
+          </Col>
+        </Row>
+      </Container>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,26 @@
+/* src/components/AdminNavbar.css */
+.navbar {
+    margin-bottom: 20px;
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    margin-right: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .nav-link:hover {
+    color: #f39c12 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  

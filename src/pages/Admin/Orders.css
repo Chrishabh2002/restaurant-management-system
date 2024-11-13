@@ -1,0 +1,61 @@
+/* src/pages/Orders.css */
+.orders-page {
+    background-color: #f9f9f9;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .order-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .order-card .card-title {
+    font-size: 1.25rem;
+    color: #3498db;
+  }
+  
+  .order-card .card-text {
+    font-size: 1rem;
+    color: #7f8c8d;
+  }
+  
+  .order-card .btn {
+    background-color: #e67e22;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .order-card .btn:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .order-card .card-title {
+      font-size: 1.1rem;
+    }
+  
+    .order-card .card-text {
+      font-size: 0.9rem;
+    }
+  
+    .page-title {
+      font-size: 2rem;
+    }
+  }
+  
