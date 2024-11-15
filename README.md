@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# 🍽️ Restaurant Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a comprehensive **Restaurant Management System** that brings together a modern **React frontend** and a powerful **Java Spring Boot backend**. It is designed to streamline restaurant operations and improve user experience through an interactive UI and robust server-side functionalities.
 
-## Available Scripts
+## 🚀 Project Overview
 
-In the project directory, you can run:
+We have completed the development of the **React frontend**, delivering a responsive and engaging user interface. Now, we are focusing on the **backend** to transform this project into a fully functional **full-stack application**.
 
-### `npm start`
+## 🖥️ Frontend Development
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The **frontend** is built using **React**, featuring a user-friendly design and interactive components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Available Scripts
 
-### `npm test`
+In the frontend project directory, you can run:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **`npm start`**: Runs the app in development mode.\\
+  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **`npm test`**: Launches the test runner for running tests.
+- **`npm run build`**: Builds the app for production, optimizing for better performance.
 
-### `npm run build`
+## 🛠️ Backend Development
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+We're developing the **backend** using **Java** and **Spring Boot** to provide a robust and scalable server-side framework.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To get started with the **backend**, ensure the following steps:
 
-### `npm run eject`
+1. **Install Java 17** or a compatible version.
+2. Navigate to the `backend` directory of the project.
+3. Run the following command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   mvn spring-boot:run
+The backend server will start at http://localhost:8080.
+Key Dependencies
+The pom.xml file includes these essential dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+spring-boot-starter-web: To build RESTful APIs.
+spring-boot-starter-data-jpa: For seamless database interactions.
+mysql-connector-java: To connect to a MySQL database (or use another DB driver as needed).
+spring-boot-starter-security: To integrate security features.
+lombok: (Optional) Helps reduce boilerplate code and simplifies development.
+CORS Configuration
+To enable communication between the React frontend and Spring Boot backend, set up CORS:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+java
+Always show details
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Copy code
+@Configuration
+public class WebConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**").allowedOrigins("http://localhost:3000");
+    }
+}
+This configuration allows API requests from the frontend without cross-origin restrictions.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📈 Next Steps
+Develop API Endpoints: Create endpoints for handling reservations, order management, user authentication, and more.
+Integrate Frontend with Backend: Connect the React components to backend services for dynamic content.
+Database Setup: Set up database tables and populate them with sample data for testing. """
