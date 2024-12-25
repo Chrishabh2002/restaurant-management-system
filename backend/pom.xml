@@ -45,7 +45,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
-            <version>9.1.0</version> <!-- Updated MySQL connector version -->
+            <version>8.0.34</version> <!-- Updated MySQL connector version -->
             <scope>runtime</scope>
         </dependency>
 
