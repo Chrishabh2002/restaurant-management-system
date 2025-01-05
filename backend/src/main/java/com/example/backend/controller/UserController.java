@@ -4,8 +4,11 @@ import com.example.backend.model.User;
 import com.example.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -35,14 +38,22 @@ public class UserController {
 
     // Create a new user
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<?> createUser(@Valid @RequestBody User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return ResponseEntity.badRequest().body(result.getAllErrors()); // Return 400 if validation fails
+        }
+
         User createdUser = userService.createUser(user);
         return ResponseEntity.status(201).body(createdUser); // Return 201 Created response
     }
 
     // Update an existing user
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @Valid @RequestBody User user, BindingResult result) {
+        if (result.hasErrors()) {
+            return ResponseEntity.badRequest().body(result.getAllErrors()); // Return 400 if validation fails
+        }
+
         User updatedUser = userService.updateUser(id, user);
         if (updatedUser != null) {
             return ResponseEntity.ok(updatedUser); // Return 200 OK response

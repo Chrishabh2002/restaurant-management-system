@@ -29,10 +29,11 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-        <!-- Spring Boot Starter Security for security features -->
+        <!-- Hibernate Validator for Bean Validation (e.g., @NotNull, @Email) -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.2.1.Final</version>
         </dependency>
 
         <!-- Spring Boot Starter Web for building RESTful web services -->
@@ -94,6 +95,20 @@
                         </exclude>
                     </excludes>
                 </configuration>
+            </plugin>
+
+            <!-- Lombok Plugin for IDE support (optional but recommended) -->
+            <plugin>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok-maven-plugin</artifactId>
+                <version>1.18.24</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>delombok</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
