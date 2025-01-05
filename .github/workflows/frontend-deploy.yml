@@ -1,4 +1,4 @@
-name: Frontend Deploy
+name: Deploy to Heroku
 
 on:
   push:
@@ -8,24 +8,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build
+      - name: Set up Heroku
+        uses: heroku/actions@v0.0.1  
 
       - name: Deploy to Heroku
-        uses: akshatmittal/heroku-action@v1
-        with:
-          heroku_app_name: "your-heroku-app-name"
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          git remote add heroku https://git@heroku.com:<restaurant-management-system>.git
+          git push heroku main
